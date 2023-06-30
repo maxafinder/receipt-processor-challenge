@@ -16,7 +16,6 @@ For this project I have provided mutliple ways to run the webservice, so the use
 &emsp;`/routes.go` - Where the application routes are defined <br />
 &emsp;`/handlers.go` - Request handlers <br />
 &emsp;`/models.go` - Data models <br />
-&emsp;`/middleware.go` - Middleware components <br />
 &emsp;`/tools.go` - Code related to auxiliary tools that aren't directly part of the main functionality of the application but support it <br />
 &emsp;`/config.go` - Configurations <br />
 

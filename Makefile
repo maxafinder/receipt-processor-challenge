@@ -10,7 +10,7 @@ BINARY_NAME = receipt-processor-challenge.out
 all: clean build
 
 build:
-	$(GOBUILD) -o $(BINARY_NAME) ./main.go
+	$(GOBUILD) -o $(BINARY_NAME) .
 
 clean:
 	$(GOCLEAN)
