@@ -1,6 +1,8 @@
 package main
 
 import (
+	"time"
+
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 )
@@ -19,6 +21,22 @@ func processReceiptHandler(c *gin.Context) {
 	if err != nil {
 		c.JSON(400, gin.H{
 			"error": "Invalid receipt received",
+		})
+		return
+	}
+
+	// Check that purchaseDate and purchaseTime are in the right format
+	_, dateErr := time.Parse("2006-01-02", receipt.PurchaseDate)
+	_, timeErr := time.Parse("15:04", receipt.PurchaseTime)
+	if dateErr != nil {
+		c.JSON(400, gin.H{
+			"error": "Date is in the wrong format",
+		})
+		return
+	}
+	if timeErr != nil {
+		c.JSON(400, gin.H{
+			"error": "Time is in the wrong format",
 		})
 		return
 	}
@@ -49,7 +67,13 @@ func getPointsHandler(c *gin.Context) {
 		return
 	}
 
-	points := calculateReceiptPoints(receipt)
+	points, err := calculateReceiptPoints(receipt)
+	if err != nil {
+		c.JSON(500, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
 
 	c.JSON(200, gin.H{
 		"points": points, 
