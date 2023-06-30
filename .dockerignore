@@ -1,0 +1,14 @@
+# Git files
+.git
+
+# All _test.go files in current directory and subdirectories
+*_test.go
+**/*_test.go
+
+# Binaries produced in local
+*.out 
+*.exe
+
+# If 'go mod vendor' is accidentally ran, a vendor/ directory will be created.
+# If another developer unfamiliar with Go modules they may create a vendor/ directory.
+vendor/

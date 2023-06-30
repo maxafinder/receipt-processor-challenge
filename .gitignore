@@ -1,0 +1,20 @@
+# Test binaries in local
+*.test 
+
+# Binaries produced in local
+*.out
+*.exe
+
+# Log files
+*.log
+
+# Editor folders
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# If 'go mod vendor' is accidentally ran, a vendor/ directory will be created.
+# If another developer unfamiliar with Go modules they may create a vendor/ directory.
+vendor/
