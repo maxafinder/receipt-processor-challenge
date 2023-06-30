@@ -14,6 +14,6 @@ func main() {
 	r := gin.Default()
 	setupRoutes(r)
 
-	// Run and listen on port 0.0.0.0:8080
-	r.Run() 
+	// Run and listen on port from config.go
+	r.Run(":" + Port) 
 }

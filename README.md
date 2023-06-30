@@ -8,7 +8,7 @@
 7. [Documentation referenced](#documentation-referenced)
 ---
 ## Description
-For this project I have provided mutliple ways to run the webservice, so the user can choose the one that is easiest for them. This project uses the Gin web framework for its high performance. Since the size of the project was small I decided to kept everything in one package. Here is an overview of the project structure that I used: <br />
+For this project I have provided mutliple ways to run the webservice, so the user can choose the one that is easiest for them. This project uses the Gin web framework for its high performance. Since the size of the project was small I decided to kept everything in one package. I have also included unit tests and they have over 80% statement coverage. Here is an overview of the project structure that I used: <br />
 
 ### Main project structure:
 `/receipt-processor-challenge` <br />
